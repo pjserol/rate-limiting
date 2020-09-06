@@ -8,8 +8,7 @@ The application is configured by default with the strategy "Fixed Window" per IP
 
 ## Run the application
 
-docker installed
-
+- docker installed
 - `docker-compose up`
 
 ## Run the application locally
