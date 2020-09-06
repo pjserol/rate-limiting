@@ -1,0 +1,19 @@
+version: '3'
+services:
+    rate-app-go:
+        container_name: rate-app-go
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        ports: 
+        - 8080:8080 
+        links:
+        - rate-app-redis
+        depends_on:
+        - rate-app-redis
+
+    rate-app-redis:
+        image: redis:6.0.7
+        container_name: rate-app-redis
+        ports:
+        - '6379:6379'
